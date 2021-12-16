@@ -10,11 +10,11 @@ public class MainActivity extends Activity {
     private int counter = 0;
 
     private void setDisplay(int value){
-        this.setDisplay(String.format("%d", value));
+        this.setDisplay(Integer.toString(value));
     }
 
     private void setDisplay(String string){
-        final TextView display = (TextView)findViewById(R.id.display);
+        final TextView display = findViewById(R.id.display);
         display.setText(string);
     }
 
