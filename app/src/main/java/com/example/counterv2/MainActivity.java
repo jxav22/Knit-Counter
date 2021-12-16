@@ -24,12 +24,16 @@ public class MainActivity extends Activity {
     }
 
     public void incrementDisplay(View view){
-        counter++;
-        setDisplay(counter);
+        if (counter < 1000) {
+            counter++;
+            setDisplay(counter);
+        }
     }
 
     public void decrementDisplay(View view){
-        counter--;
-        setDisplay(counter);
+        if (counter > 0) {
+            counter--;
+            setDisplay(counter);
+        }
     }
 }
