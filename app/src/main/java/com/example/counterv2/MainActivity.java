@@ -1,3 +1,14 @@
+/*
+TODO:
+Figure out a better name for this.
+    The Greatest Knit Counter to Currently Exist on Wear OS -> TGKCTCEOWO
+    Knit Counter
+    Counter
+Resolve 'Git is not installed' event log backup
+Test on Hannah's galaxy watch
+Make a cool icon for it
+ */
+
 package com.example.counterv2;
 
 import android.app.Activity;
