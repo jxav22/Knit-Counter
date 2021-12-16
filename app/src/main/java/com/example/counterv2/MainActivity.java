@@ -1,13 +1,28 @@
 package com.example.counterv2;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
-    private int counter = 0;
+
+    private SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+    private SharedPreferences.Editor editor = sharedPref.edit();
+
+    private void storeCounter(){
+        editor.putInt("counter", counter);
+        editor.apply();
+    }
+
+    private int loadCounter(){
+        return sharedPref.getInt("counter", 0);
+    }
+
+    private int counter = loadCounter();
 
     private void setDisplay(int value){
         this.setDisplay(Integer.toString(value));
@@ -31,6 +46,7 @@ public class MainActivity extends Activity {
         if (counter < 1000) {
             counter++;
             setDisplay(counter);
+            storeCounter();
         } else {
             // easter-egg
             setDisplay(":D");
@@ -41,6 +57,7 @@ public class MainActivity extends Activity {
         if (counter > 0) {
             counter--;
             setDisplay(counter);
+            storeCounter();
         }
     }
 }
