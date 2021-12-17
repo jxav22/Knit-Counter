@@ -8,55 +8,49 @@
     tools:context=".MainActivity"
     tools:deviceIds="wear">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout"
+    <TextView
+        android:id="@+id/display"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_boxedEdges="all">
+        android:gravity="center"
+        android:text="@string/empty_display"
+        android:textSize="96sp" />
 
-        <TextView
-            android:id="@+id/display"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/empty_display"
-            android:textSize="96sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button5"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="24dp"
+            android:id="@+id/decrementButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:background="@android:color/transparent"
             android:onClick="decrementDisplay"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button6"
+            app:layout_constraintEnd_toStartOf="@+id/incrementButton"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/button6"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:id="@+id/incrementButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="24dp"
             android:background="@android:color/transparent"
             android:onClick="incrementDisplay"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button5"
+            app:layout_constraintStart_toEndOf="@+id/decrementButton"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.wear.widget.BoxInsetLayout>
