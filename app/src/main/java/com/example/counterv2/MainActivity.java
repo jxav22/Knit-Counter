@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -61,7 +62,7 @@ public class MainActivity extends Activity {
 
 
     public void incrementDisplay(View view){
-        if (counter < 1000) {
+        if (counter < 999) {
             counter++;
             setDisplay(counter);
             storeCounter();
@@ -79,6 +80,5 @@ public class MainActivity extends Activity {
             storeCounter();
         }
     }
-
 
 }
