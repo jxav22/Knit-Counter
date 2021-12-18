@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Francis Xavier/AndroidStudioProjects/CounterV2/app/src/main/res/drawable/knit_counter_app_icon_background.xml" value="0.75" />
         <entry key="..\:/Users/Francis Xavier/AndroidStudioProjects/CounterV2/app/src/main/res/layout/activity_main.xml" value="0.9138755980861244" />
+        <entry key="..\:/Users/Francis Xavier/AndroidStudioProjects/CounterV2/app/src/main/res/mipmap-anydpi-v26/knit_counter_app_icon.xml" value="1.332142857142857" />
       </map>
     </option>
   </component>
