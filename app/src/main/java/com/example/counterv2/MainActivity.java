@@ -29,6 +29,7 @@ public class MainActivity extends WearableActivity {
 
     public TextView display;
 
+
     private void setDisplay(int value){
         this.setDisplay(Integer.toString(value));
     }
@@ -47,7 +48,7 @@ public class MainActivity extends WearableActivity {
     }
 
 
-    public void incrementDisplay(){
+    private void incrementDisplay(){
         if (counter < 999) {
             counter++;
             setDisplay(counter);
@@ -59,7 +60,7 @@ public class MainActivity extends WearableActivity {
     }
 
 
-    public void decrementDisplay(){
+    private void decrementDisplay(){
         if (counter > 0) {
             counter--;
             setDisplay(counter);
