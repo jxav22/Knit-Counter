@@ -42,8 +42,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setAmbientEnabled();
-
         // initialise data persistence
         sharedPref = this.getPreferences(Context.MODE_PRIVATE);
 
