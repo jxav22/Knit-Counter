@@ -17,14 +17,16 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.support.wearable.activity.WearableActivity;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends WearableActivity {
 
     private SharedPreferences sharedPref;
 
     private int counter;
 
+    public TextView display;
 
     private void setDisplay(int value){
         this.setDisplay(Integer.toString(value));
@@ -40,6 +42,10 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // enable always-on
+        setAmbientEnabled();
+
         setContentView(R.layout.activity_main);
 
         // initialise data persistence
@@ -51,7 +57,6 @@ public class MainActivity extends Activity {
         //initialise display
         setDisplay(counter);
     }
-
 
     private void storeCounter(){
         SharedPreferences.Editor editor = sharedPref.edit();

@@ -32,4 +32,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.wear:wear:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+
+    implementation 'com.google.android.support:wearable:2.7.0'
 }
